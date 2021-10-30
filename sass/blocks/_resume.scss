@@ -1,0 +1,101 @@
+.resume {
+    .title__section-title {
+        position: relative;
+        @include before_circle;
+        &:before {
+            left: 50%;
+            transform:translateX(-80%);
+            margin-left: -5px;
+            margin-left: 10px;
+        }
+    }
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        grid-template-rows: minmax(378, auto);
+        column-gap: 136px;
+        margin-top: 60px;
+    }
+    &__column {
+        &-title {
+            position: relative;
+            padding-left: 35px;
+            @include before_circle;
+            &:before {
+                width: 15px;
+                height: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -2%;
+            }
+        }
+        margin-bottom: 45px;
+    }
+    ul {
+        list-style-type: none;
+        li {
+            position: relative;
+            &:after {
+                content: '';
+                width: 1px;
+                height: calc(100% + 16px);
+                position: absolute;
+                top: -8px;
+                left: 0;
+                background-color: #000;
+            }
+        }
+    }
+    &__item {
+        position: relative;
+        &:before {
+            content: '';
+            height: 1px;
+            width: 33px;
+            position: absolute;
+            top: 68px;
+            background-color: #000;
+        }
+        &-head {
+            position: relative;
+            padding: 45px 0 0 100px;
+            .title{
+                margin-bottom: 0;
+            }
+        }
+        &-body {
+            padding-left: 43px;
+            margin-top: 12px;
+        }
+        &-icon {
+            position: absolute;
+            top: 50px;
+            left: 45px;
+            @include before_circle;
+            img {
+                position: absolute;
+                left: 17px;
+                top: 14px;
+            }
+        }
+        &-location {
+            font-size: 12px;
+            line-height: 18px;
+            margin-top: 5px;
+        }
+        &-body {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    &__name {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    &__item-body {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+    }
+}

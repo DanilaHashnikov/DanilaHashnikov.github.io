@@ -1,0 +1,110 @@
+.contacts {
+    padding: 120px 0 90px 0;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 400px  585px;
+        column-gap: 70px;
+    }
+    &__img-wrapper {
+        width: 400px;
+        height: 600px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__form-info-wrapper {
+        svg path {
+            &:hover {
+                fill: $main-color;
+            }
+        }
+    }
+    .title__section-title {
+        padding-left: 5px;
+        text-align: left;
+        position: relative;
+        @include before_circle;
+        &:before{
+            margin-left: 9px;
+        }
+    }
+    .title__section-subtitle {
+        text-align: left;
+    }
+    .divider {
+        margin-left: 0;
+        margin-top: 4px;
+    }
+    &__socials-title {
+        margin-top: 20px;
+    }
+    &__link {
+        display: inline-block;
+        margin-top: 20px;
+        margin-right: 18px;
+    }
+    &__form-title {
+        margin-top: 20px;
+    }
+    &__form {
+        margin-top: 30px;
+        display: grid;
+        grid-template: 45px 190px 45px / repeat(2, 280px);
+        justify-content: space-between;
+        row-gap: 33px;
+        label {
+            display: block;
+            position: absolute;
+            top: -9px;
+            left: 12px;
+            height: 18px;
+            padding: 0 8px;
+            background-color: #fff;
+            font-size: 12px;
+            margin-bottom: 0;
+        }
+    }
+    &__input {
+        position: relative;
+        input {
+            width: 100%;
+            height: 100%;
+            padding: 0 20px;
+            font-size: 12px;
+        }
+    }
+    &__textarea {
+        position: relative;
+        grid-column: 1 / 3;
+        textarea {
+            width: 100%;
+            height: 100%;
+            resize: none;
+            padding: 20px;
+            font-size: 12px;
+        }
+    }
+    &__btn {
+        border: none;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &__privacy {
+        grid-column: 1/3;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 35px;
+    }
+    &__privacy-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    &__privacy-txt {
+        font-size: 12px;
+        line-height: 14px;
+        margin-left: 10px;
+    }
+}
